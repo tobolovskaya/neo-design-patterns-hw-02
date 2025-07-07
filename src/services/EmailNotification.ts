@@ -1,6 +1,6 @@
-import { INotification, IUser, ILogger } from "../core/interfaces";
+import { INotificationChannel, IUser, ILogger } from "../core/interfaces";
 
-export class EmailNotification implements INotification {
+export class EmailNotification implements INotificationChannel {
   constructor(private logger: ILogger) {}
 
   send(user: IUser, message: string): void {
